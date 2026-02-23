@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-blue: #0066cc;
+  --color-brand-green: #28a745;
+  --color-brand-light: #f8f9fa;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-light text-slate-900 font-sans;
+  }
+}
+
+.glass-nav {
+  @apply sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200;
+}
+
+.btn-primary {
+  @apply px-6 py-3 bg-brand-blue text-white rounded-lg font-semibold hover:bg-blue-700 transition-all shadow-md hover:shadow-lg active:scale-95;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 bg-brand-green text-white rounded-lg font-semibold hover:bg-green-700 transition-all shadow-md hover:shadow-lg active:scale-95;
+}
+
+.product-card {
+  @apply bg-white rounded-2xl p-4 shadow-sm hover:shadow-xl transition-all border border-slate-100 flex flex-col;
+}
+
+.nav-link {
+  @apply text-slate-600 hover:text-brand-blue font-medium transition-colors cursor-pointer;
+}
+
+.nav-link.active {
+  @apply text-brand-blue border-b-2 border-brand-blue;
+}
