@@ -29,6 +29,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import { Analytics } from '@vercel/analytics/react';
 
 // --- Types ---
 type Page = 'home' | 'products' | 'about' | 'contact' | 'cart' | 'checkout';
@@ -765,6 +766,7 @@ export default function App() {
         </div>
 
         <Footer />
+        <Analytics />
       </div>
     </Router>
   );
